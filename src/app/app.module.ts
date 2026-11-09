@@ -3,7 +3,7 @@ import { createObserveModule } from '@nestjs/observe';
 import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
 import { ConceitosManualModule } from '../conceitos-manual/conceitos-manual.module.js';
-import { ConceitosAutomanticoModule } from '../conceitos-automantico/conceitos-automantico.module.js';
+import { ConceitosAutomaticoModule } from '../conceitos-automatico/conceitos-automatico.module.js';
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
@@ -17,10 +17,9 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
       serviceId: 'conceitos_nest',
     }),
     ConceitosManualModule,
-    ConceitosAutomanticoModule,
+    ConceitosAutomaticoModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-
 export class AppModule {}
