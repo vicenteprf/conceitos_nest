@@ -25,6 +25,9 @@ Content-Type: application/json
   "atualizar": true
 }
 
+### Apaga um recado
+DELETE {{baseUrl}}/recados/1/
+
 ### AppControllerGetHello
 
 # @name AppControllerGetHello

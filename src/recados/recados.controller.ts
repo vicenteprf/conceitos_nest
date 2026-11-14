@@ -7,6 +7,7 @@ import {
   HttpCode,
   HttpStatus,
   Patch,
+  Delete,
 } from '@nestjs/common';
 
 @Controller('recados')
@@ -26,7 +27,6 @@ export class RecadosController {
 
   @Post()
   create(@Body() body: any) {
-    console.log(body);
     return body;
   }
 
@@ -36,5 +36,10 @@ export class RecadosController {
       id,
       ...body,
     };
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return `Essa rota APAGA o recado ID ${id}`;
   }
 }
