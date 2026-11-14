@@ -3,6 +3,8 @@
 # RECADOS
 ### Lista todos os recados
 GET {{baseUrl}}/recados/
+?limit=100
+&offset=50
 
 ### Lista apenas o recado pelo id
 GET {{baseUrl}}/recados/1/
