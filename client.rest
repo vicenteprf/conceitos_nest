@@ -7,28 +7,34 @@ GET {{baseUrl}}/recados/
 &offset=50
 
 ### Lista apenas o recado pelo id
-GET {{baseUrl}}/recados/1/
+GET {{baseUrl}}/recados/2/
 
 ### Cria um recado
 POST {{baseUrl}}/recados/
 Content-Type: application/json
 
 {
-  "recado": "Este é o recado que estou enviando.",
-  "nova chave": "outro valor"
+  "texto": "Novo recado",
+  "de": "Vicente",
+  "para": "Maria",
+  "lido": false,
+  "data": "2026-11-14T23:48:11.008Z"
 }
 
 ### Atualiza um recado
-PATCH  {{baseUrl}}/recados/1/
+PATCH  {{baseUrl}}/recados/2/
 Content-Type: application/json
 
 {
-  "recado": "Este é o recado que estou enviando.",
-  "atualizar": true
+  "texto": "atualizar recado",
+  "de": "Vicente",
+  "para": "Maria",
+  "lido": false,
+  "data": "2026-11-14T23:48:11.008Z"
 }
 
 ### Apaga um recado
-DELETE {{baseUrl}}/recados/1/
+DELETE {{baseUrl}}/recados/3/
 
 ### AppControllerGetHello
 
