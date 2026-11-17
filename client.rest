@@ -16,9 +16,7 @@ Content-Type: application/json
 {
   "texto": "Novo recado",
   "de": "Vicente",
-  "para": "Maria",
-  "lido": false,
-  "data": "2026-11-14T23:48:11.008Z"
+  "para": "Maria"
 }
 
 ### Atualiza um recado
