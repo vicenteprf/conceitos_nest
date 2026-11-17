@@ -9,6 +9,8 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
+import { CreateRecadoDto } from './dto/create-recado.dto.js';
+import { UpdateRecadoDto } from './dto/update-recado.dto.js';
 import { RecadosService } from './recados.service.js';
 
 @Controller('recados')
@@ -27,16 +29,19 @@ export class RecadosController {
     return this.recadosService.findOne(id);
   }
 
+  //Criar um recado
   @Post()
-  create(@Body() body: any) {
-    return this.recadosService.create(body);
+  create(@Body() createRecadoDto: CreateRecadoDto) {
+    return this.recadosService.create(createRecadoDto);
   }
 
+  //Atualizar um recado
   @Patch(':id')
-  update(@Param('id') id: string, @Body() body: any) {
-    return this.recadosService.update(id, body);
+  update(@Param('id') id: string, @Body() updateRecadoDto: UpdateRecadoDto) {
+    return this.recadosService.update(id, updateRecadoDto);
   }
 
+  //Deletar um recado
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.recadosService.remove(id);
